@@ -1,0 +1,24 @@
+[project]
+name = "transformers-course"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Gabriel Fortuny",email = "92552031+gabrielfortuny@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "transformers[sentencepiece] (>=4.52.0,<5.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "transformers_course", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.10"
+black = "^25.1.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
